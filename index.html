@@ -9,7 +9,7 @@
         :root { --bg: #f5f5f5; --card: #ffffff; --text: #333; --accent: #1a1a1a; --gold: #b8860b; }
         .dark { --bg: #121212; --card: #1e1e1e; --text: #eee; --accent: #bb86fc; --gold: #f1c40f; }
 
-        * { box-sizing: border-box; } /* Previne desalinhamento por padding */
+        * { box-sizing: border-box; }
 
         body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); transition: 0.3s; overflow-x: hidden; }
         header { background: #000; color: white; padding: 20px; text-align: center; font-size: 22px; font-weight: bold; width: 100%; }
@@ -35,7 +35,7 @@
         .versiculo-texto { font-size: 1.2rem; line-height: 1.5; margin: 15px 0; font-style: italic; }
         .referencia { font-weight: 800; color: var(--gold); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
         
-        /* TELAS DE TRANSIÇÃO (SPLASH) - CORRIGIDAS */
+        /* TELAS DE TRANSIÇÃO (SPLASH) */
         .overlay-screen { 
             position: fixed; 
             top: 0; 
@@ -66,13 +66,11 @@
             justify-content: center;
             align-items: center;
             height: 100%;
-            margin: 0; /* Remove margens do container na splash */
         }
 
         .loader { border: 4px solid rgba(255, 255, 255, 0.1); border-left-color: var(--gold); border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin-bottom: 20px; }
         @keyframes spin { to { transform: rotate(360deg); } }
 
-        /* MODAIS E EXPORTAÇÃO */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); z-index: 10000; display: none; justify-content: center; align-items: center; flex-direction: column; }
         #final-image { max-width: 90%; border-radius: 15px; border: 5px solid white; }
         #export-container { padding: 50px; background: #1a1a1a; color: white; text-align: center; position: absolute; left: -9999px; width: 500px; height: 500px; display: flex; flex-direction: column; justify-content: center; align-items: center; border: 8px solid var(--gold); }
@@ -168,12 +166,31 @@
         { ref: "Romanos 8:28", texto: "Sabemos que todas as coisas cooperam para o bem daqueles que amam a Deus, daqueles que são chamados segundo o seu propósito." },
         { ref: "Isaías 41:10", texto: "Não temas, porque eu sou contigo; não te assombres, porque eu sou teu Deus; eu te fortaleço, e te ajudo, e te sustento com a destra da minha justiça." },
         { ref: "Provérbios 3:5", texto: "Confie no Senhor de todo o seu coração e não se apoie em seu próprio entendimento." },
-        { ref: "Mateus 11:28", texto: "Venham a mim, todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês." }
+        { ref: "Mateus 11:28", texto: "Venham a mim, todos os que estão cansados e sobrecarregados, e eu darei descanso a vocês." },
+        { ref: "Salmos 119:105", texto: "Lâmpada para os meus pés é tua palavra e luz, para o meu caminho." },
+        { ref: "Mateus 6:33", texto: "Busquem, pois, em primeiro lugar o Reino de Deus e a sua justiça, e todas essas coisas lhes serão acrescentadas." },
+        { ref: "1 Pedro 5:7", texto: "Lancem sobre ele toda a sua ansiedade, porque ele tem cuidado de vocês." },
+        { ref: "Hebreus 11:1", texto: "Ora, a fé é a certeza daquilo que esperamos e a prova das coisas que não vemos." },
+        { ref: "Gálatas 5:22", texto: "Mas o fruto do Espírito é amor, alegria, paz, paciência, amabilidade, bondade, fidelidade." },
+        { ref: "Salmos 37:5", texto: "Entregue o seu caminho ao Senhor; confie nele, e ele agirá." },
+        { ref: "Neemias 8:10", texto: "Não se entristeçam, porque a alegria do Senhor é a vossa força." },
+        { ref: "2 Coríntios 12:9", texto: "A minha graça te basta, porque o meu poder se aperfeiçoa na fraqueza." },
+        { ref: "Provérbios 16:3", texto: "Consagre ao Senhor tudo o que você faz, e os seus planos serão bem-sucedidos." },
+        { ref: "Salmos 121:1", texto: "Elevo os meus olhos para os montes; de onde me vem o socorro? O meu socorro vem do Senhor, que fez o céu e a terra." },
+        { ref: "Mateus 28:20", texto: "E lembrem-se: eu estou com vocês todos os dias, até o fim dos tempos." },
+        { ref: "João 14:6", texto: "Respondeu Jesus: Eu sou o caminho, a verdade e a vida. Ninguém vem ao Pai, a não ser por mim." },
+        { ref: "Salmos 100:5", texto: "Pois o Senhor é bom e o seu amor leal dura para sempre; a sua fidelidade permanece de geração em geração." },
+        { ref: "Lamentações 3:22-23", texto: "As misericórdias do Senhor são a causa de não sermos consumidos; elas se renovam cada manhã. Grande é a tua fidelidade." },
+        { ref: "Tiago 1:5", texto: "Se algum de vocês tem falta de sabedoria, peça-a a Deus, que a todos dá livremente, de boa vontade; e lhe será concedida." },
+        { ref: "Salmos 91:1", texto: "Aquele que habita no abrigo do Altíssimo e descansa à sombra do Todo-poderoso." },
+        { ref: "Efésios 2:8", texto: "Pois vocês são salvos pela graça, por meio da fé, e isto não vem de vocês, é dom de Deus." },
+        { ref: "Filipenses 4:6", texto: "Não andem ansiosos por coisa alguma, mas em tudo apresentem seus pedidos a Deus pela oração e súplica, com ação de graças." },
+        { ref: "Colossenses 3:23", texto: "Tudo o que fizerem, façam de todo o coração, como para o Senhor, e não para os homens." },
+        { ref: "Provérbios 18:10", texto: "O nome do Senhor é uma torre forte; os justos correm para ela e estão seguros." }
     ];
 
     window.onload = function() {
         renderizarFavoritos();
-
         const sorteado = versiculosInternos[Math.floor(Math.random() * versiculosInternos.length)];
         document.getElementById('splash-texto').innerText = `"${sorteado.texto}"`;
         document.getElementById('splash-ref').innerText = sorteado.ref;
